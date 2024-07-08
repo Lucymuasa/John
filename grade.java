@@ -1,28 +1,43 @@
-public class StudentGrade {
+public class Grade Evaluator {
     public static void main(String[] args) {
-        double averageMarks = 82.5; // Assuming the average marks obtained
-        
-        // Determine grade based on average marks
+        int[] marks = {90, 85, 78, 92, 88};
+        evaluateGradeAndPassStatus(marks);
+    }
+
+    public static void evaluateGradeAndPassStatus (int[] marks) {
+        // Calculate the average marks
+        double average Marks = calculate Average(marks);
+
+        // Determine the grade and pass status
         String grade;
-        if (averageMarks >= 93.0) {
+        String pass Status;
+        if (average Marks >= 93) {
             grade = "A";
-        } else if (averageMarks >= 85.0) {
+            pass Status = "passed";
+        } else if (average Marks >= 85) {
             grade = "B";
-        } else if (averageMarks >= 80.0) {
+            pass Status = "passed";
+        } else if (average Marks >= 80) {
             grade = "C";
-        } else if (averageMarks >= 75.0) {
+            pass Status = "passed";
+        } else if (average Marks >= 75) {
             grade = "D";
+            pass Status = "passed";
         } else {
             grade = "E";
+            pass Status = "fail";
         }
-        
-        // Print grade
+
+        // Print the results
+        System.out.printf("Average Marks: %.2f%n", average Marks);
         System.out.println("Grade: " + grade);
-        
-        // Determine pass or fail based on average marks and passing threshold
-        String passOrFail = (averageMarks >= 75.0) ? "Pass" : "Fail";
-        
-        // Print pass or fail
-        System.out.println("Result: " + passOrFail);
+        System.out.println("Status: " + pass Status);
+    }
+    public static double calculate Average(int[] marks) {
+        int sum = 0;
+        for (int mark : marks) {
+            sum += mark
+  }
+        return (double) sum / marks. Length;
     }
 }
